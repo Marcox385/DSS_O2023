@@ -9,11 +9,11 @@ jobs:
     - name: Log greeting and PR details
       run: |
          # Definición de variables
-         PR_AUTHOR=${{ github.event.pull_request.user.login }};
-         PR_COMMIT=${{ github.event.head_commit.message }};
+         PR_AUTHOR="${{ github.event.pull_request.user.login }}";
+         PR_COMMIT="${{ github.event.head_commit.message }}";
 
          # Log info
-         chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh;
-         ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt;
+         # chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh;
+         # ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt;
       shell: bash
 
