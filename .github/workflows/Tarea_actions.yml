@@ -4,6 +4,8 @@ on: pull_request
 jobs:
   log_greeting:
     runs-on: ubuntu-latest
+    env:
+      PR_AUTHOR: ${{ github.event.pull_request.user.login }}
     steps:
     - uses: actions/checkout@v3
     - name: Environment setting
@@ -12,9 +14,6 @@ jobs:
         ref: ${{ env.GITHUB_SHA }}
     - name: Log greeting and PR details
       run: |
-         PR_AUTHOR="${{ github.event.pull_request.user.login }}";
-
-         # Log info
          echo "Hello World! at $( date +"%d/%M/%Y" )";
          echo "PR Author: $PR_AUTHOR";
          echo "Last commit: $(git show -s --format=%s)";
