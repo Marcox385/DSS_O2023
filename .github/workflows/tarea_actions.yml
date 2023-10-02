@@ -1,5 +1,5 @@
 name: Tarea Github Actions
-on: pull-request
+on: pull_request
 
 jobs:
   log_greeting:
