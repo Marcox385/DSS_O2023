@@ -15,7 +15,9 @@ jobs:
          PR_AUTHOR="${{ github.event.pull_request.user.login }}";
 
          # Log info
-         chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh;
-         ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt;
+         echo "Hello World! at $( date +"%d/%M/%Y" )";
+         echo "PR Author: $PR_AUTHOR";
+         echo "Last commit: $(git show -s --format=%s)";
+         echo -e "Commit diff:\n$( git fetch && git diff origin/main..origin/tarea_actions )\n";
       shell: bash
 
