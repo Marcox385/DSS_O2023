@@ -1,0 +1,14 @@
+name: Tarea Github Actions
+on: pull-request
+
+jobs:
+  log_greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Log greeting and PR details
+      run: |
+         chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh
+         ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt
+      shell: bash
+
