@@ -5,10 +5,15 @@ jobs:
   log_greeting:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Log greeting and PR details
+      with:
+        ref: ${{ env.GITHUB_SHA }}
       run: |
-         chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh
-         ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt
+         PR_AUTHOR="${{ github.event.pull_request.user.login }}";
+
+         # Log info
+         chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh;
+         ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt;
       shell: bash
 
