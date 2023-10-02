@@ -5,7 +5,7 @@ jobs:
   log_greeting:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Log greeting and PR details
       run: |
          # Definición de variables
@@ -13,7 +13,7 @@ jobs:
          PR_COMMIT="${{ github.event.head_commit.message }}";
 
          # Log info
-         # chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh;
-         # ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt;
+         chmod +x ./Tareas/IS727272\ -\ Github\ Actions.sh;
+         ./Tareas/IS727272\ -\ Github\ Actions.sh | tee ./logs/PR_log.txt;
       shell: bash
 
