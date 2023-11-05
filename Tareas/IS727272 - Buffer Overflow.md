@@ -1,6 +1,8 @@
 # Buffer Overflow
 ### IS727272 - Cordero Hernández, Marco Ricardo
 
+_Mejor visto en [GitHub](https://github.com/Marcox385/DSS_O2023/blob/main/Tareas/IS727272%20-%20Buffer%20Overflow.md)_
+
 ## Introducción
 Dentro del ámbito del desarrollo del software, una gran variedad de vulnerabilidades con múltiples niveles de severidad se dan en el día a día. La buena noticia es que la existencia de comunidades y entidades como [CWE][1], [CERT][2], [NIST][3], y más popularmente, [OWASP][4], proporcionan metodologías para el desarrollo seguro y la concientización de las potenciales amenazas y sus consecuencias al no asegurar su uso. La mala es que aún con tantos recursos disponibles, las fallas continuan emergiendo constantemente, y por ende, las repercusiones en ambientes productivos reales. Entre las miles de posibles vulnerabilidades, existe una que destaca por su carácter silencioso pero potencialmente catastrófico: _buffer overflow_.
 
